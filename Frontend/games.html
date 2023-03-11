@@ -45,13 +45,15 @@
             </div>
           </nav>
     </header>
+
+    
     <div class="container">
-      <div clas="row">
-       <div class="col"  style="max-width: 50%;">
-        <h2 style="margin-top:1rem; margin-left:3rem; max-width: 50%;">Query Racer</h2>
-       </div>
-      <div class="col" style="max-width: 50%; "><a id="timer" ></a>
-      </div>
+      <div class="row">
+        <div class="col-8">
+          
+                  <h1>Query Racer</h1>
+          </div>
+        <div class="col-4"><h1 id="clock"></h1></div>
       </div>
     </div>
 <div class="container">
@@ -62,7 +64,7 @@
       </div>
       <div style="background-color: #efebe4; border-radius: 10px ;" class="col">
         <h5>Your Query:</h5>
-        <textarea class="terminal" rows="20" id="terminal" style=" width:95%; background-color: #000;color: #fff; border-color: #000; border-radius: 10px; height:9rem;"></textarea>
+        <textarea class="terminal" rows="20" id="querybox" style=" width:95%; background-color: #000;color: #fff; border-color: #000; border-radius: 10px; height:9rem;"></textarea>
         <button id="run" type="button" class="btn btn-dark">Run</button>
         <button id="submit" type="button" class="btn btn-dark">Submit</button>
         </form>
@@ -74,7 +76,7 @@
         </div>
         <div style="background-color: lightgrey; border-radius: 10px ;" class="col">
             <h5>Query Result</h5>
-            <a id="msg"></a>
+            <a style="visibility: hidden;" id="msg"></a>
             <table id="output" style="visibility: hidden;">
               <thead>
                 <tr>
