@@ -151,10 +151,18 @@ function showWrong(){
 }
 
 function showEnd(){
+
+    
+
+
+    document.getElementById("modalScore").innerHTML = "You finished in " + clock.innerHTML;
+
     // show our pre made bootstrap modal with the id of "endModal" in vanilla javascript
     document.getElementById("endModal").style.display = "block";
 
-    
+    // stop clock
+    clearTimeout(t); 
+ 
    
 }
 
