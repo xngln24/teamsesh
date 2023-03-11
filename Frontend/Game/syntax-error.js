@@ -1,4 +1,4 @@
-document.getElementById("terminal").innerHTML = level1;
+
 
 
 var level1 = `
@@ -57,7 +57,7 @@ var level5 = `
 
 `;
 
-
+document.getElementById("terminal").innerHTML = level1;
 
 
 //there is a clock with an id of "clock" in the html file, make it count up by 1 every second
@@ -121,6 +121,9 @@ function change(x) {
         case 4:
             chosenlevel = level4;
             break;
+        case 5:
+            chosenlevel = level5;
+            break;
 
         default:
             chosenlevel = level1;
@@ -151,12 +154,8 @@ function showEnd(){
     // show our pre made bootstrap modal with the id of "endModal" in vanilla javascript
     document.getElementById("endModal").style.display = "block";
 
-    //make the script wait for 1 second before continuing
-    setTimeout(function() {
-        // hide the modal
-        document.getElementById("endModal").style.display = "none";
-    }
-    , 1000);
+    
+   
 }
 
 
