@@ -22,10 +22,16 @@ submit.addEventListener("click",function(){
 });
 
 runbutton.addEventListener("click",function(){
-    console.log("fun")
+
+    if(document.getElementById("terminal").innerHTML==="select * from books")
+    {
     document.getElementById("output").style.visibility="visible";
-}
-)
+    }
+    else{
+        document.getElementById("output").style.visibility="hidden";
+    }
+    
+})
 
 
 
