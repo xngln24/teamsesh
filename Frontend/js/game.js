@@ -37,6 +37,11 @@ runbutton.addEventListener("click",function(){
     if(document.getElementById("querybox").value=="select * from books"){
         console.log("correct");
         document.getElementById("output").style.visibility="visible";
+
+        document.getElementById("endModal").style.display = "block";
+
+        // end the clock    
+        clearTimeout(t);
     }
     else{
         console.log("wrong");
@@ -50,7 +55,11 @@ runbutton.addEventListener("click",function(){
 submitbutton.addEventListener("click",function(){
     if(document.getElementById("querybox").value=="select * from books"){
         console.log("correct");
-        showEnd();
+        // show our pre made bootstrap modal with the id of "endModal" in vanilla javascript
+        document.getElementById("endModal").style.display = "block";
+
+        // end the clock    
+        clearTimeout(t);
     }
     else{
         console.log("wrong");
@@ -59,11 +68,21 @@ submitbutton.addEventListener("click",function(){
     }
 })
 
-function showEnd(){
-    // show our pre made bootstrap modal with the id of "endModal" in vanilla javascript
-    document.getElementById("endModal").style.display = "block";
-   
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
