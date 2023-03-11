@@ -3,6 +3,9 @@ const timer= document.getElementById("timer");
 const submit= document.getElementById("submit");
 let time=0;
 let interval;
+const runbutton= document.getElementById("run");
+const submitbutton= document.getElementById("submit");
+
 function startTimer(){
     interval = setInterval(function(){
         time++;
@@ -17,4 +20,12 @@ submit.addEventListener("click",function(){
     stopTimer();
     console.log(time);
 });
+
+runbutton.addEventListener("click",function(){
+    console.log("fun")
+    document.getElementById("output").style.visibility="visible";
+}
+)
+
+
 
