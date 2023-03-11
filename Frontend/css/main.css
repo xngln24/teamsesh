@@ -1,3 +1,9 @@
 body {
     background-color: #F7F3EB;
 }
+button{
+    background-color: #08ec64;
+}
+tr td{
+    display:center; 
+}
