@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="../css/main.css">
 
+   
+
+
     <style>
         .terminal p:hover{
             background-color:rgba(121, 117, 112, 0.442);
@@ -75,64 +78,26 @@
                     <p class="lead">Select the line with the error. </p>
                   
           </div>
-          <div class="col-4"><h1>00:06</h1></div>
+          <div class="col-4"><h1 id="clock"></h1></div>
         </div>
       </div>
 
-      <br>
+      <br><br><br>
       <div class="container">
         <div class="row">
           <div class="col-8">
 
-           
+            <h3 id="levelCount">1/5</h3>
 
-           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+            <div class="terminal" id="terminal" style="background-color: black; color:white; padding: 20px; height: 500px; border-radius:7px">
+              
+                
 
-                <h3>1/10</h3>
-               
-                <div class="terminal" style="background-color: black; color:white; padding: 20px; height: 500px; border-radius:7px">
-                    <p>1. def multiply_integers(a, b):</p>
-                    <p>2. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp """</p>
-                    <p>3. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp Multiply two integers and return the result.</p>
-                    <p>4. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp """</p>
-                    <p>5. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp if not isinstance(a, int) or not isinstance(b, int):</p>
-                    <p>6. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp raise TypeError("Both inputs must be integers")</p>
-                    <p >7. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp return a ** b</p>
-                    
-                    
-    
-                </div>
-
-              </div>
-              <div class="carousel-item">
-                <h3>2/10</h3>
-               
-                <div class="terminal" style="background-color: black; color:white; padding: 20px; height: 500px; border-radius:7px">
-                    <p>1. def multiply_integers(a, b):</p>
-                    <p>2. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp """</p>
-                    <p>3. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp Multiply two integers and return the result.</p>
-                    <p>4. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp """</p>
-                    <p>5. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp if not isinstance(a, int) or not isinstance(b, int):</p>
-                    <p>6. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp raise TypeError("Both inputs must be integers")</p>
-                    <p>7. &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp return a ** b</p>
-                    
-    
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
             </div>
             
           </div>
-
-            
-            
-          </div>
           <div class="col-4">
-            <h3 style="color: #F7F3EB ">1/10</h3>
+            <h3 style="color: #F7F3EB;">dd</h3>
             <div class="leaderboard" style="padding: 20px; color:rgb(49, 49, 49)">
 
                 <h2>Leaderboard</h2>
@@ -181,34 +146,6 @@
                           <h4>01:42</h4>
                         </div>
                       </div>
-
-                      <div class="row">
-                        <div class="col">
-                          <h4> 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                          </svg>
-                           Tom
-                        </h4>
-                        </div>
-                        <div class="col">
-                          <h4>02:02</h4>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col">
-                          <h4> 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                          </svg>
-                           Sandra 
-                        </h4>
-                        </div>
-                        <div class="col">
-                          <h4>02:14</h4>
-                        </div>
-                      </div>
                     
                   </div>
 
@@ -217,9 +154,64 @@
         </div>
       </div>
 
+
+      <!-- Correct answer modal -->
+
+
+      <div class="modal" tabindex="-1" role="dialog" id="checkmarkModal" style="margin-top:20%" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: #ffffff00; border:rgba(49, 49, 49, 0)">
+            
+            <div class="modal-body" style="text-align: center;">
+              <!-- PNG CORRECT -->
+
+              <img src="../img/check.png" alt="" width="20%">
+
+
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id="wrongModal" style="margin-top:20%" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: #ffffff00; border:rgba(49, 49, 49, 0)">
+            
+            <div class="modal-body" style="text-align: center;">
+              <!-- PNG WRONG -->
+
+              <img src="../img/wrong.png" alt="" width="20%">
+
+
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
  
 
-
+      <script src="syntax-error.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
